@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+    body,html{
+    height: 100%;
+    margin= 0%;
+    }
+    .bg{
+    background-image: url("https://www.siemanet.com/assets/images/email-protection.jpg");
+    height: 100%;
+    background-position: center;
+    background-repeat: no_repeat;
+    background-size: cover;
+    }
+    </style>
+	<title>Message Spam Detection</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+	<!-- <link rel="stylesheet" type="text/css" href="../static/css/styles.css"> -->
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body background="https://www.siemanet.com/assets/images/email-protection.jpg">
+	
+	<section class="contact">
+		  <div class="content">
+			  <h2>Spam Detector For Email contacts</h2>
+			  <p>We are doing Machine Learning App with Flask by using Python Tools</p>
+		  </div>
+		  <div class="container">
+			  <div class="contactInfo">
+				  <div class="box">
+					<div class="icon"><i class="fa fa-map-marker" aria-hidden="true"></i></div>
+					<div class="text">
+						<h3>Address</h3>
+						<p>BCET,<br>Balasore,<br>756605</p>
+					</div>
+				  </div>
+				  <div class="box">
+					<div class="icon"><i class="fa fa-phone" aria-hidden="true"></i></div>
+					<div class="text">
+						<h3>Phone</h3>
+						<p>3872288333</p>
+					</div>
+				  </div>
+				  <div class="box">
+					<div class="icon"><i class="fa fa-envelope-o" aria-hidden="true"></i></div>
+					<div class="text">
+						<h3>Email</h3>
+						<p>spamdetector123@gmail.com</p>
+					</div>
+				  </div>
+			  </div>
+			 
+			  <div class="contactForm">
+				  <form action="{{ url_for('predict')}}" method="POST">
+					  <div class="inputBox">
+						<textarea name="message" rows="6" cols="50" placeholder="Type your message here...." required="required"></textarea>
+					  </div>
+					  <div class="inputBox">
+						<input type="submit" class="btn-info" value="Predict">
+					  </div>
+				  </form>
+			  </div>
+		  </div>
+	 </section>
+</body>
+</html>

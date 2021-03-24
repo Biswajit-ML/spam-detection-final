@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Message Spam Detection</title>
+	<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='resStyle.css') }}">
+</head>
+<body>
+
+	<center>
+			<div class="txt">Spam Detector For SMS Messages</div>
+			<div class="content">
+			  <div class="content3">
+				<div class="max">Results for Comments</div>
+				<div class="results">
+                	{% if prediction == 1%}
+                	<h2 style="color:red; text-align: center;">Spam</h2>
+                	{% elif prediction == 0%}
+                	<h2 style="color:blue; text-align: center;">Not a Spam (It is a Ham)</h2>
+                	{% endif %}
+	            </div>
+			 </div>
+			</div>
+	</center>
+</body>
+</html>
